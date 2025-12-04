@@ -59,7 +59,6 @@ const followUser=async(req,res)=>{
         res.status(500).json({message:error.message})
     }
 }
-
 const unfollowUser=async(req,res)=>{
     try {
         const currentUserId=req.user._id
@@ -93,4 +92,36 @@ const unfollowUser=async(req,res)=>{
         res.status(500).json({message:error.message})
     }
 }   
-export {getUserProfile,updateUserProfile,followUser,unfollowUser}
+
+const getFollowers=async(req,res)=>{
+try {
+    const {userId}=req.params.id;
+    const user=await User.findById(userId).populate("followers", "name username").select("followers")
+    if(!user){
+        return res.status(404).json({message:"user not found"})
+    }
+    res.status(200).json({message:"followers fetched successfully",followers:user.followers})
+
+} catch (error) {
+     console.log(error.message)
+        res.status(500).json({message:error.message})
+}
+}
+
+const getFollowing=async(req,res)=>{
+try {
+    const {userId}=req.params.id;
+    const user=await User.findById(userId).populate("following", "name username").select("following")
+    if(!user){
+        return res.status(404).json({message:"user not found"})
+    }
+    res.status(200).json({message:"following user fetched successfully",following:user.following})
+    //   res.status(200).json({message:"following user fetched successfully"},user.following)---> also correct
+
+} catch (error) {
+     console.log(error.message)
+        res.status(500).json({message:error.message})
+}
+}
+
+export {getUserProfile,updateUserProfile,followUser,unfollowUser,getFollowers,getFollowing}
