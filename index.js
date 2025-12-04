@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectionDb from './src/config/database.js';
-import router from './src/routes/user.routes.js';
+import router from './src/routes/auth.routes.js';
 
 dotenv.config();
 const app = express();
@@ -14,8 +14,6 @@ app.get('/', (req, res) => {
 });
 
 app.use("/user",router)
-
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
