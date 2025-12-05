@@ -44,24 +44,9 @@ try {
     }
     await Post.findByIdAndDelete(postId)
 
-    
-
-
-
-
 
 } catch (error) {
-    
-
-
-
 }
-
-
-
-
-
-
 }
 
 export {createPost,getSinglePost,}
