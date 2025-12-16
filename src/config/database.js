@@ -9,7 +9,6 @@ const connectionDb = async () => {
         console.log('database is connected successfully');
     } catch (error) {
         console.error('connection failed', error);
-       
     }
 };
 export default connectionDb;
