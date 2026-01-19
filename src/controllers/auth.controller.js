@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 dotenv.config()
 
+
 const signup=async(req,res)=>{
     try {
         const {username,email,name,password,bio}=req.body
