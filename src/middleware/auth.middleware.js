@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import User from '../models/use.jsr'
 
-
+// middlewaree updated
 const verifyToken=async(req,res,next)=>{
     try {
         const token=req.headers.authorization
