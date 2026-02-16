@@ -1,6 +1,5 @@
 import Post from "../models/post.js";
-
-
+//create post controller
 const createPost=async(req,res)=>{
     try {
         const {caption,imageUrl}=req.body;
