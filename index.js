@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import connectionDb from './src/config/database.js';
 import router from './src/routes/auth.routes.js';
 
+//dotenv.config 
 dotenv.config();
 const app = express();
 app.use(express.json());
