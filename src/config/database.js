@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 doenv.config();
 //connectionDb
 const connectionDb = async () => {
-
+//try catch block
     try {
         await mongoose.connect(process.env.MONGODB_URL);
         console.log('database is connected successfully');
