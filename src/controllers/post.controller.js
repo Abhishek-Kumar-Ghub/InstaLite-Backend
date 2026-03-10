@@ -16,6 +16,7 @@ const createPost=async(req,res)=>{
     }
 }
 
+//getSinglePost
 const getSinglePost=async(req,res)=>{
 try {
     const {postId}=req.params
