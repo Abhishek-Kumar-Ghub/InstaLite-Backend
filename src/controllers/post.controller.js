@@ -31,7 +31,7 @@ try {
         res.status(500).json({message:"Internal server error"})
 }
 }
-
+//deletePost
 const deletePost=async(req,res)=>{
 try {
     const postId=req.params.id;
