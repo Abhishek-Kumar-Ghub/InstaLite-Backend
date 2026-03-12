@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const postSchema= new mongoose.Schema({
     
+    //caption
     caption:{
         type:String,
         trim:true,
