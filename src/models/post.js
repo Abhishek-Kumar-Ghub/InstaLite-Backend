@@ -5,6 +5,8 @@ const postSchema= new mongoose.Schema({
     caption:{
         type:String,
         trim:true,
+        
+        //author
     },
     author:{
         type:mongoose.Schema.Types.ObjectId,
