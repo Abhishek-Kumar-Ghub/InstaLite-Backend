@@ -11,6 +11,7 @@ const storySchema = new mongoose.Schema({
         ref:"User",
         required:true,
     },
+    //caption
     caption:{
         type:String,
     },
