@@ -15,6 +15,7 @@ const storySchema = new mongoose.Schema({
     caption:{
         type:String,
     },
+    //createdAt
     createdAt:{
         type:Date,
         default:Date.now,
