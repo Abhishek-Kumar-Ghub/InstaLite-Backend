@@ -13,6 +13,7 @@ const postSchema= new mongoose.Schema({
         ref:"User",
         required:true,
     },
+    //imageUrl
     imageUrl:{
         type:String,
         required:true,
