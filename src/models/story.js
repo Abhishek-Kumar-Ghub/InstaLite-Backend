@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const storySchema = new mongoose.Schema({
+    //mediaUrl
     mediaUrl:{
         type:String,
         required:true,
