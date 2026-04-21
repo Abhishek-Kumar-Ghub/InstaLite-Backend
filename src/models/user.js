@@ -32,6 +32,7 @@ const userSchema= new mongoose.Schema({
         required:true,
         trim:true,
     },
+    //followers
     followers:[{
          type:mongoose.Schema.Types.ObjectId,
          ref:"User"
