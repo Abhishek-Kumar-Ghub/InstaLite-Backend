@@ -11,5 +11,6 @@ const connectionDb = async () => {
         console.error('connection failed', error);
     }
 };
+//export connectionDb
 export default connectionDb;
 
