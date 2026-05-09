@@ -5,5 +5,5 @@ const router= express.Router();
 //signup login routes
 router.post("/signup",signup)
 router.post("/login",login)
-
+//export
 export default router
