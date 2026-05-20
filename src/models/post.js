@@ -7,6 +7,7 @@ const postSchema= new mongoose.Schema({
         trim:true,
         
         //author
+//aurhor
     },
     author:{
         type:mongoose.Schema.Types.ObjectId,
